@@ -1,0 +1,109 @@
+{
+  "uuid": "2bc9a0fd-5397-4d26-a8c7-d972b83851e3",
+  "lastMigration": 19,
+  "name": "Products list",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3003,
+  "hostname": "0.0.0.0",
+  "routes": [
+    {
+      "uuid": "99432a31-ce39-42ee-be79-1605d7dd31cd",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "myproductslist",
+      "responses": [
+        {
+          "uuid": "c8898a85-1cc0-4f65-8d3b-d6f0fa59be62",
+          "body": "{\n  \"productsList\": [\n    {\n      \"name\": \"Necklace\",\n      \"catalogNumber\": \"148512\",\n      \"price\": \"950$\"\n    },\n    {\n      \"name\": \"Bracelet\",\n      \"catalogNumber\": \"95126\",\n      \"price\": \"700$\"\n    },\n    {\n      \"name\": \"Ring\",\n      \"catalogNumber\": \"452966\",\n      \"price\": \"640$\"\n    },\n    {\n      \"name\": \"Earring\",\n      \"catalogNumber\": \"0052481\",\n      \"price\": \"400$\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "",
+              "value": ""
+            }
+          ],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false
+        }
+      ],
+      "enabled": true,
+      "randomResponse": false,
+      "sequentialResponse": false
+    },
+    {
+      "uuid": "4a0d4992-0e3d-4c71-a3e8-bcea02d1c5d9",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "sales",
+      "responses": [
+        {
+          "uuid": "e95f11e3-ca4d-4c1f-bece-f3abf1175c53",
+          "body": "{\n  \"Necklace\":\"10%\",\n  \"Ring\":\"25%\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false
+        }
+      ],
+      "enabled": true,
+      "randomResponse": false,
+      "sequentialResponse": false
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ]
+}
