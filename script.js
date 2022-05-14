@@ -1,5 +1,3 @@
-let btnCounter=0;
-let productsArr=[];
 let evt;
 
 function display(){
@@ -10,7 +8,6 @@ fetch("http://localhost:3003/myproductslist")
 
 
 function displayList(productsMames){
-    productsArr=productsMames;
     productsMames.forEach(element => {
         document.getElementById('card').innerHTML+=
         `<div class="cardP">
