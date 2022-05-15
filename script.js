@@ -12,7 +12,7 @@ function displayList(productsMames){
         document.getElementById('card').innerHTML+=
         `<div class="cardP">
          <h1>${element.name}</h1>
-         <img  src="./images/${element.name}.jpg">
+         <img  src="./images/${element.img}">
          <h4>Price: ${element.price}</h4>
          <button class="btnSale" id="${element.name}"> check sale </button>
         </div>`;
@@ -32,14 +32,17 @@ function productSale(event){
 
 function displatDiscount(discount){
     if(evt.id=="Necklace"){
-        alert(`we have discount of ${discount.Necklace} ❤!!!`);
+        let price=700-(700*0.1);
+        alert(`we have discount of ${discount.Necklace} ❤!!!
+         the price now: ${price}$ 🎉`);
     }
     else if(evt.id=="Ring"){
-        alert(`we have discount of ${discount.Ring} ❤!!!`);
+        let price=640-(640*0.25);
+        alert(`we have discount of ${discount.Ring} ❤!!!
+         the price now: ${price}$ ✨`);
     }else{
         alert("sorry, we have not sale on this product 😞");
     }
 }
-
 
 
