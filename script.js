@@ -21,28 +21,21 @@ function displayList(productsMames){
 
 document.addEventListener("click",productSale);
 
+
+
 function productSale(event){
  evt=event.target;
+
  if(evt.classList[0]=="btnSale"){
-       fetch("http://localhost:3003/sales")
+      let myData={
+    "product":evt.id
+     };
+       fetch("http://localhost:3003/sales",{
+           method:"POST",
+           body: JSON.stringify(myData),
+           headers: {"Content-type": "application/json; charset=UTF-8"}
+       })
         .then(response => response.json())
-        .then(responseSale=>displatDiscount(responseSale));
+        .then(responseSale=>alert(`${responseSale.message}`));
  }
-}
-
-function displatDiscount(discount){
-    if(evt.id=="Necklace"){
-        let price=700-(700*0.1);
-        alert(`we have discount of ${discount.Necklace} ❤!!!
-         the price now: ${price}$ 🎉`);
-    }
-    else if(evt.id=="Ring"){
-        let price=640-(640*0.25);
-        alert(`we have discount of ${discount.Ring} ❤!!!
-         the price now: ${price}$ ✨`);
-    }else{
-        alert("sorry, we have not sale on this product 😞");
-    }
-}
-
-
+};
